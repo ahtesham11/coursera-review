@@ -1,0 +1,657 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Coursera Reviews Sentiment Analysis</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shorBtcut icon" type="image/x-icon" href="{{url_for('static',filename='img/favicon.ico')}}">
+        <!-- Place favicon.ico in the root directory -->
+
+		<!-- CSS here -->
+        <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/animate.min.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/magnific-popup.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='fontawesome/css/all.min.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/dripicons.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/slick.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/default.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/swiper.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/Style.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/responsive.css')}}">
+       
+    </head>
+    <body>
+        <!-- header -->
+        <header class="header-area">            
+            <div id="header-sticky" class="menu-area">
+                <div class="container">
+                    <div class="second-menu">
+                        <div class="row align-items-center">
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html"><img src="{{url_for('static',filename='img/logo/logo1.svg')}}" alt="logo"></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-9">
+                                <div class="responsive"><i class="icon dripicons-align-right"></i></div>
+                                <div class="main-menu text-right text-xl-right">
+                                     <nav id="mobile-menu">
+                                        <ul>
+                                            <li class="has-sub">
+												<a href="#parallax">Home</a>
+											</li>
+                                            <li><a href="#features">Review Analyzer</a></li>
+                                            <li><a href="#about-us">About Us</a></li>                                        
+                                        </ul>
+                                    </nav>                                           
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header-end -->
+        <!-- main-area -->
+        <main>
+            <!-- slider-area -->
+            <section id="parallax" class="slider-area slider-bg2 second-slider-bg d-flex fix" style="background-image: url({{url_for('static',filename='img/bg/pink-header-bg.png')}}); background-position:right 0; background-repeat: no-repeat; background-size: 65%;">
+                
+                <div class="slider-shape ss-one layer" data-depth="0.10"><img src="{{url_for('static',filename='img//shape//header-sape.png')}}" alt="shape"></div>
+               
+     			 <div class="slider-shape ss-eight layer" data-depth="0.50"></div>
+                
+                
+               
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="slider-content second-slider-content left-center">         
+                                        <div class="mt-3"></div>
+                                        <h2 data-animation="fadeInUp" data-delay=".4s">Sentiment Analysis of <span>Coursera Reviews</span></h2>
+                                        <p data-animation="fadeInUp" data-delay=".6s">Sentiment analysis is the use of natural language processing, text analysis, computational linguistics, and biometrics to systematically identify, extract, quantify, and study affective states and subjective information.</p>
+                                        <div class="slider-btn mt-30 mb-30">
+                                            <a href="#" class="btn ss-btn" data-animation="fadeInUp" data-delay=".8s">Review Analyzer</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="col-lg-6">
+                                     <img src="{{url_for('static',filename='img/bg/mobile-demo.png')}}" alt="shape" class="s-img">
+                                </div>
+                            </div>
+                    
+                </div>
+            </section>
+            <!-- slider-area-end -->
+			 <!-- services-area -->
+            <section id="about" class="services-area services-bg pt-25 pb-20" style="background-image: url({{url_for('static',filename='img/shape/header-sape2.png')}}); background-position: right top; background-size: auto;background-repeat: no-repeat;">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-7 col-lg-10">
+                            <div class="section-title text-center pl-40 pr-40 mb-45">
+                                <h2>Features in Sentiment Analysis</h2>
+                                <p>Sentiment analysis helps business to get along to understand customer needs and get a hand on big data.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 mb-30">
+                            <div class="s-single-services active text-center">
+                                <div class="services-icon">
+                                   <img src="{{url_for('static',filename='img/icon/f-icon1.png')}}"/>
+                                </div>
+                                <div class="second-services-content">
+                                    <h5>Tokenization</h5>
+                                    <p>Tokenization is the process of turning sensitive data into non-sensitive data called "tokens“.</p>
+                                    <a href="#"><span>1</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 mb-30">
+                            <div class="s-single-services text-center">
+                                 <div class="services-icon">
+                                  <img src="{{url_for('static',filename='img/icon/f-icon3.png')}}"/>
+                                </div>
+                                <div class="second-services-content">
+                                    <h5>Stop Words</h5>
+                                    <p>Stop words are the English words which does not add much meaning to a sentence.</p>
+                                    <a href="#"><span>2</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 mb-30">
+                           <div class="s-single-services text-center">
+                                <div class="services-icon">
+                                  <img src="{{url_for('static',filename='img/icon/f-icon2.png')}}"/>
+                                </div>
+                                <div class="second-services-content">
+                                    <h5>Negation Handling</h5>
+									<p>A negative statement, judgment, or doctrine. Negation Handling is an automatic way of       determining the scope of negation.</p>
+                                    <a href="#"><span>3</span></a>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="row">
+                        
+
+
+                    </div>
+                  
+                </div>
+            </section>
+
+
+
+
+            <div class="container line" style="height: 1px; border: 1px solid green;"></div>
+            <!-- services-area-end -->
+
+
+            <section id="features" class="contact-area contact-bg  pt-50 pb-100 p-relative fix"  style="background-image: url({{url_for('static',filename='img/shape/header-sape8.png')}}); background-position: right center; background-size: auto;background-repeat: no-repeat;">
+                <div class="container">
+             
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="contact-img2">
+                                <img src="{{url_for('static',filename='img/bg/illustration.png')}}" alt="test" >
+                            </div>                      
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="section-title mb-40">                              
+                                <h2>Write your Review</h2>
+                                  <p>Enter your review to find sentiments and classification of the review.</p>
+                            </div>
+                        <form id="myForm" action="index.html" method="post" onsubmit="return verify()" class="contact-form">
+                            <div class="row">
+                            <div class="col-lg-12">
+                                <div class="contact-field p-relative c-message mb-45">                                  
+                                    <textarea name="text" id="myText" cols="10" rows="20" placeholder="Write review...">{{text}}</textarea>
+                                </div>
+                                <button type="submit" name="submit" value="Analyze" class="btn">Analyze</button>
+                                <button class="btn" type="reset" onclick="clean();" value="Reset" style="margin-left: 20px;">Reset</button>
+                            </div>
+                            </div>
+                        
+                    </form>
+                    <p></p>
+                    <div id="result">
+                        {%if result%} <!--loop-->
+                        <div id=info> <br>
+                            <h2>Results</h2>
+                        </div>
+                        <div class="container">
+                            {% if result == 'Positive' %}
+                            <!--row1-->
+                            <div class="row">
+                                <div class="alert alert-success text-style col-md-4 " role="alert">
+                                    {{result}}
+                                </div>
+                                <div class="alert alert-success text-style col-md-8" role="alert">
+                                    {{confidence}} <span style="font-size: 1em;">&#128515; </span>% 
+                                </div>
+                            </div>
+                            <!--row2-->
+                            <div class="row">
+                                <div class="alert alert-success text-style col-md-4 " role="alert">
+                                    Accuracy Score
+                                </div>
+                                <div class="alert alert-success text-style col-md-8" role="alert">
+                                    {{score}}  
+                                </div>
+                            </div>
+                            <!--row3-->
+                            <div class="row">
+                                <div class="alert alert-success text-style col-md-4 " role="alert">
+                                    Analysis
+                                </div>
+                                <div class="alert alert-success text-style col-md-8" role="alert">
+                                    {{final}}  
+                                </div>
+                            </div>
+                    
+                            {% elif result == 'Negative' %}
+                            <div class="row">
+                                <div class="alert alert-danger text-style col-md-4 " role="alert">
+                                    {{result}}
+                                </div>
+                                <div class="alert alert-danger text-style col-md-8" role="alert">
+                                    {{confidence}} <span style="font-size: 1em;">&#128548; </span>%
+                                </div>
+                            </div>
+                            <!--row2-->
+                            <div class="row">
+                                <div class="alert alert-danger text-style col-md-4 " role="alert">
+                                    Polarity Score
+                                </div>
+                                <div class="alert alert-danger text-style col-md-8" role="alert">
+                                    {{score}}  
+                                </div>
+                            </div>
+                            <!--row3-->
+                            <div class="row">
+                                <div class="alert alert-danger text-style col-md-4 " role="alert">
+                                    Analysis
+                                </div>
+                                <div class="alert alert-danger text-style col-md-8" role="alert">
+                                    {{final}}  
+                                </div>
+                            </div>
+                            {% else %}
+                            <div class="row">
+                                <div class="alert alert-dark text-style col-md-4 " role="alert">
+                                    {{result}}
+                                </div>
+                                <div class="alert alert-dark text-style col-md-8" role="alert">
+                                    {{confidence}}<span style="font-size: 1em;">&#128578;</span>%
+                                </div>
+                            </div>
+                            <!--row2-->
+                            <div class="row">
+                                <div class="alert alert-dark text-style col-md-4 " role="alert">
+                                    Polarity Score
+                                </div>
+                                <div class="alert alert-dark text-style col-md-8" role="alert">
+                                    {{score}}  
+                                </div>
+                            </div>
+                            <!--row3-->
+                            <div class="row">
+                                <div class="alert alert-dark text-style col-md-4 " role="alert">
+                                    Analysis
+                                </div>
+                                <div class="alert alert-dark text-style col-md-8" role="alert">
+                                    {{final}}  
+                                </div>
+                            </div>
+                            {% endif %}
+                        </div>
+                        {%endif%}
+                    
+                    </div>
+                        </div>
+                    </div>
+                    
+                </div>
+               
+            </section>
+            <!-- contact-area-end -->
+			<!-- choose-area -->
+            <section class="choose-area pt-100 pb-60 p-relative" style="background-image: url({{url_for('static',filename='img/shape/header-sape3.png')}}); background-position: right center; background-size: auto;background-repeat: no-repeat;">
+                <div class="chosse-img" style="background-image:url({{url_for('static',filename='img/bg/easy-m-bg.png')}})"></div>
+                <div class="chosse-img2"><img src="{{url_for('static',filename='img/bg/mobile2.png')}}" alt="mobile"/></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-5">
+                        </div>
+                        <div class="col-xl-7">
+                            <div class="choose-wrap">
+                                <div class="section-title w-title left-align mb-25">
+                                    <h2>CNN Long Short-Term Memory Networks</h2>
+                                </div>
+                                <div class="choose-content">
+                                    <p>Input with spatial structure, like images, cannot be modeled easily with the standard Vanilla LSTM.The CNN Long Short-Term Memory Network or CNN LSTM for short is an LSTM architecture specifically designed for sequence prediction problems with spatial inputs, like images or videos.</p>
+                                     <p>A <b>convolutional neural network (CNN)</b>is a type of artificial neural network used in image recognition and processing that is specifically designed to process pixel data.A neural network is a system of hardware and/or software patterned after the operation of neurons in the human brain.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- choose-area-end -->
+            <!-- how-app-work -->
+            <section id="features" class="app-work pt-70 pb-100 p-relative" style="background-image: url({{url_for('static',filename='img/shape/header-sape4.png')}}); background-position: right center; background-size: auto;background-repeat: no-repeat;">            
+                <div class="container">
+                    <div class="row align-items-center ">
+                       
+                        <div class="col-xl-6">
+                            <div class="choose-wrap">
+                                <div class="section-title w-title left-align mb-15">
+                                    <h2>How does Sentiment Analysis works?</h2>
+                                </div>
+                                <div class="app-work-content mt-20">
+                                    <ul>
+                                        <li>
+                                            <div class="icon"><i class="fa fa-keyboard-o" aria-hidden="true"></i></div> 
+                                            <div class="text">
+                                                <h4>1.      Reviews Data</h4>
+                                                <p>The data is collected through Coursera reviews submitted by different students</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            
+                                            <div class="text">
+                                                <h4>2.      Data Exploration and Processing</h4>
+                                                <p>The data is converted into differnet portions and all the processing is done on the data</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                           
+                                            <div class="text">
+                                                <h4>3.      Learning the Model</h4>
+                                                <p>The student reviews are being trained and model learns to identify reviews</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                          
+                                            <div class="text">
+                                                <h4>4.      Model Evaluation</h4>
+                                                <p>The models are being tested to find the best model that represents our data and how well the chosen model will work in the future.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-xl-6">
+                            <img src="{{url_for('static',filename='img/bg/app-work-img.png')}}" alt="app-work-img" class="img">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- how-app-work -->
+            <!-- video-area -->
+            <section class="video-area pt-100 pb-100 p-relative">                
+                <div class="video-img2">
+                    
+                    <img src="{{url_for('static',filename='img/bg/video-img.png')}}" alt="mobile"/>
+
+                
+                    <a href="https://www.youtube.com/watch?v=O_B7XLfx0ic&t=12s" class="popup-video"><img src="{{url_for('static',filename='img/bg/play-btn.png')}}" alt="play-btn.png"></a>
+                </div>
+                <div class="video-img3">
+                    <img src="{{url_for('static',filename='img/shape/header-sape5.png')}}" alt="header-sape4">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6">
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="video-wrap">
+                                <div class="section-title w-title left-align mb-25">
+                                    <h2>Overview of Sentiment Analysis</h2>
+                                </div>
+                                <div class="video-content">
+                                    
+                                     <ul>
+                                        <li>
+                                            <div class="icon"><img src="{{url_for('static',filename='img/icon/vs-icon.png')}}"></div> 
+                                            <div class="text">Better overview of Big Data.
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon"><img src="{{url_for('static',filename='img/icon/vs-icon.png')}}"></div> 
+                                            <div class="text">Helps organizations understand customer needs.
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon"><img src="{{url_for('static',filename='img/icon/vs-icon.png')}}"></div> 
+                                            <div class="text">Monitor brand and products and discovering new Marketing strategies.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- video-area-end -->
+            <!-- screen-area -->
+            <section id="screen" class="screen-area services-bg services-two pt-100 pb-70"  style="background-image: url({{url_for('static',filename='img/shape/header-sape4.png')}}); background-position: right center; background-size: auto;background-repeat: no-repeat;">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-8 col-lg-10">
+                            <div class="section-title text-center pl-40 pr-40 mb-50">                               
+                                <h2>Some Screenshots from Coursera</h2>
+                                <p>Coursera Inc. is an American massive open online course provider founded in 2012 by Stanford University computer science professors Andrew Ng and Daphne Koller. Coursera works with universities and other organizations to offer online courses, certifications, and degrees in a variety of subjects</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        
+                         <!-- Swiper -->
+                          <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide"><img src="{{url_for('static',filename='img/gallery/screen-img01.png')}}" alt="slide 1"></div>
+                              <div class="swiper-slide"><img src="{{url_for('static',filename='img/gallery/screen-img02.png')}}" alt="slide 1"></div>
+                              <div class="swiper-slide"><img src="{{url_for('static',filename='img/gallery/screen-img03.png')}}" alt="slide 1"></div>
+                              <div class="swiper-slide"><img src="{{url_for('static',filename='img/gallery/screen-img04.png')}}" alt="slide 1"></div>
+                              <div class="swiper-slide"><img src="{{url_for('static',filename='img/gallery/screen-img05.png')}}" alt="slide 1"></div>
+
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                          </div>
+
+          </div>
+                    </div>
+                    
+
+            </section>
+            <!-- screen-area-end -->     
+            
+            
+             <!-- newslater-area -->
+            <section class="newslater-area pt-90 pb-100" style="background-image: url({{url_for('static',filename='img/bg/subscribe-bg.png')}});background-size: cover;" >
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-8 col-lg-10">
+                            <div class="section-title text-center pl-40 pr-40 mb-50">
+                                <h2>What are advantages of using LSTM CNN</h2>
+                                <p>Quisque posuere mollis ipsum et molestie. Fusce cursus, risus vel scelerisque porttitor, leo quam vulputate nibh, sit amet blandit erat magna.</p>
+                            </div>
+                        </div>
+                    </div>
+                   <div class="row justify-content-center">          
+                       <div class="col-xl-6 col-lg-10">
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <!-- newslater-aread-end -->
+			
+            <!-- testimonial-area -->
+            <section id="testimonios" class="testimonial-area testimonial-p  pt-100 pb-70" style="background-image:url({{url_for('static',filename='img/bg/client-bg.png')}}); background-repeat: no-repeat; background-position: right center;">
+                <div class="container">
+                    <div class="row">    
+                        <div class="col-lg-6">
+                             <div class="section-title center-align">                              
+                                <h2>Some of reviews submitted by Students</h2>
+                                <p>This is an example of reviews that students wrote on coursera subjects and are submitted on website.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                           
+                            <div class="testimonial-active">
+                                <div class="col-xl-4">
+                                    <div class="single-testimonial">
+                                        <div class="testi-author text-left">
+                                            <img src="{{url_for('static',filename='img/testimonial/testi_avatar1.png')}}" alt="img">
+                                            <div class="ta-info">
+                                                <h6>Abdul Rasheed</h6>
+                                                <span>Student</span>
+                                            </div>
+                                        </div>
+                                        <div class="qutation"><img src="{{url_for('static',filename='img/bg/qutation.png')}}" alt="qutation.png"></div>
+                                        
+                                        <p>Please make sure that you’ve completed Course 2 and are familiar with the basics of TensorFlow. If you’d like to prepare additionally, you can take Course 1: Neural Networks and Deep Learning of the Deep Learning Specialization.</p>
+                                        
+                                    </div>
+                                </div>
+                                 <div class="col-xl-4">
+                                    <div class="single-testimonial">
+                                       <div class="testi-author text-left">
+                                            <img src="{{url_for('static',filename='img/testimonial/testi_avatar1.png')}}" alt="img">
+                                            <div class="ta-info">
+                                                <h6>Hassan Tariq</h6>
+                                                <span>Student </span>
+                                            </div>
+                                        </div>
+                                         <div class="qutation"><img src="{{url_for('static',filename='img/bg/qutation.png')}}" alt="qutation.png"></div>
+                                         <p>
+Generally the course was good and gave me way much more clarity about how sentiment analysis works. I am giving it 4.5 stars as I got lost a few times on some python practices (for example how did we ended up using the text clearing for the final solution). Nice to have: correct subtitles. All theoretical concepts were very well explained. Thank you</p>
+                                        
+                                       
+                                    </div>
+                                </div>
+                                 <div class="col-xl-4">
+                                    <div class="single-testimonial">
+                                         <div class="testi-author text-left">
+                                            <img src="{{url_for('static',filename='img/testimonial/testi_avatar1.png')}}" alt="img">
+                                            <div class="ta-info">
+                                                <h6>Abdul Khaliq</h6>
+                                                <span>Student</span>
+                                            </div>
+                                        </div>
+                                         <div class="qutation"><img src="{{url_for('static',filename='img/bg/qutation.png')}}" alt="qutation.png"></div>
+                                        <p>I was really impressed by the way the course is organised. There are code challenges, it doesn't get too in depth with theory. It's enough to make you understand the general idea and feel like the code it's valuable. Thank you for the great work! I'll follow yRahim.</p>
+                                        
+                                    </div>
+                                </div>
+                                 <div class="col-xl-4">
+                                    <div class="single-testimonial">
+                                        <div class="testi-author text-left">
+                                            <img src="{{url_for('static',filename='img/testimonial/testi_avatar1.png')}}" alt="img">
+                                            <div class="ta-info">
+                                                <h6>Rahim</h6>
+                                                <span>Web Developer</span>
+                                            </div>
+                                        </div>
+                                        <div class="qutation"><img src="{{url_for('static',filename='img/bg/qutation.png')}}" alt="qutation.png"></div>
+                                         <p>An excellent course and a great task-oriented introduction to NLP. Rather than just walking through a single example in a "do this then do that", the instructor provided explanations that were simple but not simplistic. I would have given it five stars except that the CountVector model did not converge.</p>
+                                        
+                                    </div>
+                                </div>
+                                 <div class="col-xl-4">
+                                    <div class="single-testimonial">
+                                        <div class="testi-author text-left">
+                                            <img src="{{url_for('static',filename='img/testimonial/testi_avatar.png')}}" alt="img">
+                                            <div class="ta-info">
+                                                <h6>Naila Khan</h6>
+                                                <span>Student</span>
+                                            </div>
+                                        </div>
+                                        <div class="qutation"><img src="{{url_for('static',filename='img/bg/qutation.png')}}" alt="qutation.png"></div>
+                                        <p>Very interested in the subject and I must say this course fully match my expectations. Will try to use it with new data and see what's coming out! Thanks a lot :).</p>
+                                        
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+						
+                    </div>
+                </div>
+            </section>
+            <!-- testimonial-area-end -->
+           
+           
+            
+			
+            <!-- contact-area -->
+            
+        </main>
+        <!-- main-area-end -->
+        <!-- footer -->
+        <footer id="about-us" class="footer-bg footer-p pt-60" style="background-image: url({{url_for('static',filename='img/bg/f-bg.png')}}); background-position: center top; background-size: auto;background-repeat: no-repeat;">            
+  
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-3 col-lg-3 col-sm-6">
+                            <div class="footer-widget mb-30">
+                                <div class="logo mt-15 mb-15">
+                                    <a href="#"><img src="{{url_for('static',filename='img/logo/logo1.svg')}}" alt="logo"></a>
+                                </div>
+                                <div class="footer-text mb-20">
+                                    <p>Made with Love ❤️ by Ahtesham Noor</p>
+                                </div>
+                                <div class="footer-social">
+                                    <a href="https://www.facebook.com/ahteshamnoor11"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-sm-6">
+                            <div class="footer-widget mb-30">
+                                <div class="f-widget-title">
+                                    <h5>Useful Links</h5>
+                                </div>
+                                <div class="footer-link">
+                                    <ul>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Review Analyzer</a></li>
+                                     
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>                        
+                        <
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-wrap text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="copyright-text">
+                                <p>&copy; 2021 @ SK Digital.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer-end -->
+
+
+		<!-- JS here -->
+        <script src="{{url_for('static',filename='js/vendor/modernizr-3.5.0.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/popper.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/one-page-nav-min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/slick.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/ajax-form.js')}}"></script>
+        <script src="{{url_for('static',filename='js/paroller.js')}}"></script>
+        <script src="{{url_for('static',filename='js/wow.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/js_isotope.pkgd.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/imagesloaded.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/parallax.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/jquery.waypoints.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/jquery.counterup.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/jquery.scrollUp.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/typed.js')}}"></script>
+        <script src="{{url_for('static',filename='js/parallax-scroll.js')}}"></script>
+        <script src="{{url_for('static',filename='js/jquery.magnific-popup.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/element-in-view.js')}}"></script>
+        <script src="{{url_for('static',filename='js/swiper.min.js')}}"></script>
+        <script src="{{url_for('static',filename='js/main.js')}}"></script>
+        <script type="text/javascript">
+            function clean(){
+                document.getElementById('result').innerHTML = "";
+                window.location.replace("/index.html");
+            }
+            function verify(){
+                document.getElementById('result').innerHTML = "";
+                var text = document.getElementById('myText').value;
+                var pattern = /\w+/;
+                if (pattern.test(text) != true){
+                    return false;
+                }
+            }
+        </script>
+        
+    </body>
+</html>

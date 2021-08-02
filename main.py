@@ -3,7 +3,7 @@ from textblob import TextBlob
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 nltk.download('vader_lexicon')
-
+nltk.data.path.append('./nltk_data/')
 app = Flask(__name__)
 @app.route("/")
 

@@ -1,0 +1,251 @@
+<!doctype html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap -->
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;0,600;0,800;0,900;1,100;1,400;1,600&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+        <title>Sentimental Analysis</title>
+
+    </head>
+    <body>
+         <nav class="navbar navbar-light navbar-expand-lg sticky-top shadow">
+        <div class="container-fluid mt-3">
+            <h4 class="project-title">Sentiment Analyzer</h4>
+            <div class="custom-nav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link"  href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Review Analyzer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<form id="myForm" action="analyzer.html" method="post" onsubmit="return verify()">
+    <div class="form-group container">
+        <div id="phrase" style="width: auto; margin: auto;">
+            <p class="shadow" style="font-family: poppins; font-size: 1.5em; font-style: normal; text-align: center; padding: 30px; font-weight: 700; color: white; margin-top: 30px; background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);" >Type a Word, Phrase or Sentence</p>
+        </div>
+
+        <textarea name="text" class="form-control" id="myText" minlength="2"rows="5" autofocus="" placeholder="Write something to check polarity">{{text}}</textarea> <!--text is variable-->
+    </div>
+    <div class="btns">
+        <input type="submit" style="font-family: poppins; padding: 10px 15px 10px 15px;" class="btn btn-success" name="submit" value="Analyze">
+        <input type="reset" style="font-family: poppins; padding: 10px 15px 10px 15px;" class="btn btn-danger" onclick="clean();" value="Reset">
+    </div>
+</form>
+<p></p>
+<div id="result">
+    {%if result%} <!--loop-->
+    <div id=info>
+        <h1>RESULT</h1>
+    </div>
+    <div class="container">
+        {% if result == 'Positive' %}
+        <!--row1-->
+        <div class="row">
+            <div class="alert alert-success text-style col-md-4 " role="alert">
+                {{result}}
+            </div>
+            <div class="alert alert-success text-style col-md-8" role="alert">
+                {{confidence}} <span style="font-size: 1em;">&#128515; </span>% 
+            </div>
+        </div>
+        <!--row2-->
+        <div class="row">
+            <div class="alert alert-success text-style col-md-4 " role="alert">
+                Accuracy Score
+            </div>
+            <div class="alert alert-success text-style col-md-8" role="alert">
+                {{score}}  
+            </div>
+        </div>
+        <!--row3-->
+        <div class="row">
+            <div class="alert alert-success text-style col-md-4 " role="alert">
+                Analysis
+            </div>
+            <div class="alert alert-success text-style col-md-8" role="alert">
+                {{final}}  
+            </div>
+        </div>
+
+        {% elif result == 'Negative' %}
+        <div class="row">
+            <div class="alert alert-danger text-style col-md-4 " role="alert">
+                {{result}}
+            </div>
+            <div class="alert alert-danger text-style col-md-8" role="alert">
+                {{confidence}} <span style="font-size: 1em;">&#128548; </span>%
+            </div>
+        </div>
+        <!--row2-->
+        <div class="row">
+            <div class="alert alert-danger text-style col-md-4 " role="alert">
+                Polarity Score
+            </div>
+            <div class="alert alert-danger text-style col-md-8" role="alert">
+                {{score}}  
+            </div>
+        </div>
+        <!--row3-->
+        <div class="row">
+            <div class="alert alert-danger text-style col-md-4 " role="alert">
+                Analysis
+            </div>
+            <div class="alert alert-danger text-style col-md-8" role="alert">
+                {{final}}  
+            </div>
+        </div>
+        {% else %}
+        <div class="row">
+            <div class="alert alert-dark text-style col-md-4 " role="alert">
+                {{result}}
+            </div>
+            <div class="alert alert-dark text-style col-md-8" role="alert">
+                {{confidence}}<span style="font-size: 1em;">&#128578;</span>%
+            </div>
+        </div>
+        <!--row2-->
+        <div class="row">
+            <div class="alert alert-dark text-style col-md-4 " role="alert">
+                Polarity Score
+            </div>
+            <div class="alert alert-dark text-style col-md-8" role="alert">
+                {{score}}  
+            </div>
+        </div>
+        <!--row3-->
+        <div class="row">
+            <div class="alert alert-dark text-style col-md-4 " role="alert">
+                Analysis
+            </div>
+            <div class="alert alert-dark text-style col-md-8" role="alert">
+                {{final}}  
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    {%endif%}
+
+</div>
+
+<!--javascript-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    function clean(){
+        document.getElementById('result').innerHTML = "";
+        window.location.replace("/analyzer.html");
+    }
+    function verify(){
+        document.getElementById('result').innerHTML = "";
+        var text = document.getElementById('myText').value;
+        var pattern = /\w+/;
+        if (pattern.test(text) != true){
+            return false;
+        }
+    }
+</script>
+<style type="text/css">
+    body{
+        background: #FCFCFF;
+        }
+        .navbar{
+        background: #FCFCFF;
+        height: 100px;
+        }
+        
+        .custom-nav li {
+        padding-left: 30px;
+        padding-right: 30px;
+        color: black;
+        font-family: 'Poppins',sans-serif;
+
+        }
+        .navbar-light .navbar-nav .nav-link.active,
+        .navbar-light .navbar-nav .show>.nav-link {
+        color: #fd1d1d;
+        ::selection{
+            color: white;
+            background-color: #545C78;
+        }
+        }
+        .project-title{
+        width: 800px;
+        font-family: 'Poppins',sans-serif;
+        font-weight: bolder;
+        background: -webkit-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-left: 16px;
+        }
+
+        .btns{
+            width: 200px;
+            margin: auto;
+            margin-top: 30px;
+        }
+        #info{
+            font-family: poppins;
+            text-align: center;
+            font-weight: 700;
+            color: #545C78;
+            font-size: 2em;
+        }
+        .text-style{
+            font-family: poppins;
+            color: black;
+            font-style: normal;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        #result{
+            width: 800px;
+            margin: auto;
+        }
+        @media screen and (max-width: 968px) {
+        .custom-nav{
+            display: none;
+
+        }
+    }
+        @media screen and (max-width: 600px) {
+        .custom-nav {
+            display: none;
+        }
+        #phrase{
+            font-size: 14px;
+            width: 100%;
+        }
+        .project-title{
+            text-align: center;
+        }
+        #myText{
+            width: 400px;
+            margin: auto;
+        }
+        .text-style{
+            font-size: 0.9em;
+        }
+
+</style>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+body{
+        background: #FCFCFF;
+        }
+        .navbar{
+        background: #FCFCFF;
+        height: 100px;
+        }
+        
+        .custom-nav li {
+        padding-left: 30px;
+        padding-right: 30px;
+        color: black;
+        font-family: 'Poppins',sans-serif;
+
+        }
+        .navbar-light .navbar-nav .nav-link.active,
+        .navbar-light .navbar-nav .show>.nav-link {
+        color: #A25EDC;
+        ::selection{
+            color: white;
+            background-color: #545C78;
+        }
+        }
+        .project-title{
+        width: 800px;
+        font-family: 'Poppins',sans-serif;
+        font-weight: bolder;
+        background: -webkit-linear-gradient(98.89deg, #EC56C4 1.71%, #4468FA 88.09%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-left: 16px;
+        }
+        #myText{
+            border-radius:15px;
+            border: 1px solid black;
+            margin-top: 30px;
+            width: 700px;
+            margin: auto;
+        }
+        .btns{
+            width: 200px;
+            margin: auto;
+            margin-top: 30px;
+        }
+        #info{
+            font-family: poppins;
+            text-align: center;
+            font-weight: 700;
+            color: #545C78;
+            font-size: 2em;
+        }
+        .text-style{
+            font-family: poppins;
+            color: black;
+            font-style: normal;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        #result{
+            width: 800px;
+            margin: auto;
+        }
+        @media screen and (max-width: 968px) {
+        .custom-nav{
+            display: none;
+
+        }
+    }
+        @media screen and (max-width: 600px) {
+        .custom-nav {
+            display: none;
+        }
+        #phrase{
+            font-size: 14px;
+            width: 100%;
+        }
+        .project-title{
+            text-align: center;
+        }
+        #myText{
+            width: 400px;
+            margin: auto;
+        }
+        .text-style{
+            font-size: 0.9em;
+        }

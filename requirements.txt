@@ -1,4 +1,4 @@
 textblob
 nltk
 flask
-nlyk.sentiment.vader
+nltk.sentiment.vader

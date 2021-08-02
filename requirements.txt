@@ -1,4 +1,4 @@
 textblob
-nltk
+nltk==3.5
 flask
 
